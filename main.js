@@ -16,6 +16,7 @@ const translations = {
     "footer.rules": "Rules",
     "footer.faq": "FAQ",
   },
+
   ua: {
     title: "Казино Вавада",
     text: "Ласкаво просимо у світ Вавада! Отримай бонус та грай.",
@@ -32,6 +33,7 @@ const translations = {
     "footer.rules": "Правила",
     "footer.faq": "Питання",
   },
+
   pl: {
     title: "Kasyno Vavada",
     text: "Witamy w świecie Vavada! Odbierz bonus i graj.",
@@ -50,7 +52,6 @@ const translations = {
   }
 };
 
-// Застосування перекладу
 function setLanguage(lang) {
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach(el => {
@@ -63,7 +64,6 @@ function setLanguage(lang) {
   localStorage.setItem("lang", lang);
 }
 
-// Завантажити вибрану мову при старті
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.querySelector(".lang-select");
   const savedLang = localStorage.getItem("lang") || "en";
